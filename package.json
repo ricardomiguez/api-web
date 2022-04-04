@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ricardomiguez/api-web#readme",
   "dependencies": {
+    "axios": "^0.26.1",
     "express": "^4.17.3"
   }
 }
