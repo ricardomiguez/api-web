@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ricardomiguez/api-web/issues"
   },
-  "homepage": "https://github.com/ricardomiguez/api-web#readme"
+  "homepage": "https://github.com/ricardomiguez/api-web#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
