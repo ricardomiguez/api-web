@@ -24,3 +24,7 @@ app.put('/', (req, res) => {
   content = req.body.content;
   res.send(content);
 });
+
+app.delete('/:id', (req, res) => {
+  res.send(req.params.id);
+});
