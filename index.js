@@ -6,14 +6,21 @@ app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
 
+let content = 'Hello World!';
+
 // Middlewares
 app.use(express.json());
 
 // Routes
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send(content);
 });
 
 app.post('/', (req, res) => {
   res.send(req.body);
+});
+
+app.put('/', (req, res) => {
+  content = req.body.content;
+  res.send(content);
 });
