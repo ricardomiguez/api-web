@@ -1,3 +1,5 @@
+const axios = require('axios');
+
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -27,4 +29,16 @@ app.put('/', (req, res) => {
 
 app.delete('/:id', (req, res) => {
   res.send(req.params.id);
+});
+
+const url = 'https://api.github.com/users/ricardomiguez';
+
+app.get('/github', (req, res) => {
+  axios.get(url)
+    .then(response => {
+      res.send(response.data);
+    })
+    .catch(error => {
+      console.log(error.message);
+    });
 });
